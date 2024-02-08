@@ -10,8 +10,9 @@ type Handler struct {
 }
 
 func NewHandler(service *service.Service) *Handler {
-	return &Handler{services: services}
+	return &Handler{services: service}
 }
+
 func (h *Handler) InitRoutes() *gin.Engine {
 	router := gin.New()
 
